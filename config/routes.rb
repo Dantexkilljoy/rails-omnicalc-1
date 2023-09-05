@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 
   get "square_root/results", to: "calculator#square_root_results"
 
+  get "payment/results", to: "calculator#payment_results"
+
   # get "results"
 end
