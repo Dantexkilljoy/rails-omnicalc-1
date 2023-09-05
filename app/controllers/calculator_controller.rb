@@ -11,6 +11,12 @@ class CalculatorController < ApplicationController
   def square_root
   end
 
+  def square_root_results
+    @number = params.fetch("user_number").to_i
+
+    @result = Math.sqrt(@number)
+  end
+
   def payment
   end
 
