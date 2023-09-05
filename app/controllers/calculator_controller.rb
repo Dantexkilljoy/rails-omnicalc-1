@@ -3,16 +3,16 @@ class CalculatorController < ApplicationController
   end
 
   def square_results
-    @number = params.fetch("number").to_i
+    @number = params.fetch("number").to_f
 
-    @result = @number * @number
+    @result = @number.to_f * @number.to_f
   end
 
   def square_root
   end
 
   def square_root_results
-    @number = params.fetch("user_number").to_i
+    @number = params.fetch("user_number").to_f
 
     @result = Math.sqrt(@number)
   end
@@ -42,6 +42,11 @@ class CalculatorController < ApplicationController
   end
 
   def random_results
+    @min = params.fetch("user_min").to_f
+
+    @max = params.fetch("user_max").to_f
+
+    @result = rand(@min..@max)
   end
 
 

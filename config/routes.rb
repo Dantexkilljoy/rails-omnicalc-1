@@ -15,5 +15,7 @@ Rails.application.routes.draw do
 
   get "payment/results", to: "calculator#payment_results"
 
+  get "random/results", to: "calculator#random_results"
+
   # get "results"
 end
