@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get "square/results", to: "calculator#square_results"
 
-
+  get "square_root/results", to: "calculator#square_root_results"
 
   # get "results"
 end
